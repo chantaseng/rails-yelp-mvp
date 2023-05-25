@@ -3,6 +3,7 @@
 <p><%= @restaurant.phone_number %></p>
 <p><%= @restaurant.category %></p>
 
+<p><%= link_to "Add review", new_restaurant_review_path(@restaurant) %></p>
 <p><%= link_to "Edit restaurant", edit_restaurant_path(@restaurant) %></p>
 <p><%= link_to "Back to index", restaurants_path %></p>
 <%= link_to "Delete",

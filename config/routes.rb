@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :restaurants, only: [:index, :new, :create, :show, :edit, :update, :destroy]
+  resources :restaurants, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
+    resources :reviews, only: [:new, :create]
+  end
+
 
   # Read all
   # get '/restaurants', to: 'restaurants#index'
@@ -17,5 +20,4 @@ Rails.application.routes.draw do
 
   # Delete
   # delete '/restaurants/:id', to: 'restaurants#destroy'
-
 end
